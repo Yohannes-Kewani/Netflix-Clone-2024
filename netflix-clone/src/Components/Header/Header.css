@@ -1,0 +1,42 @@
+.header_outer_container {
+position: sticky;
+top: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+background-image: linear-gradient(360deg, transparent, rgba(0,0,0,.719), #000);
+height: 10vh;
+color: #fff;
+transition: all .5s;
+transition-timing-function: ease-in;
+z-index: 1;
+}
+.Header_container {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+.Header_left ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    width: 140%;
+    cursor: pointer;
+}
+.Header_left ul li{
+  padding: 10px;
+  font-weight: 200;
+  font-size: 14px;
+}
+.Header_right ul{
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+.Header_right ul li{
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  font-weight: 200;
+}
