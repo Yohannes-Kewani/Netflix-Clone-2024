@@ -1,14 +1,27 @@
 .header_outer_container {
-  position: sticky;
+  position: fixed; /* Makes header stay at the top */
   top: 0;
+  left: 0;
+  right: 0;
+  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent; /* FULLY transparent */
-  height: 10vh;
+  background-image: linear-gradient(
+    360deg,
+    transparent,
+    rgba(0, 0, 0, 0.719),
+    #000
+  );
+  background-color: transparent; /* Transparent by default */
   color: #fff;
-  transition: all 0.5s ease-in;
   z-index: 1000;
+  transition-timing-function: ease-in;
+}
+
+/* Optional: Add a dark background on scroll */
+.header_outer_container.scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .Header_container {
@@ -22,13 +35,13 @@
   display: flex;
   list-style: none;
   align-items: center;
-  margin: 0;
   padding: 0;
+  margin: 0;
   cursor: pointer;
 }
 
 .Header_left ul li {
-  padding: 10px;
+  padding: 10px 15px;
   font-weight: 400;
   font-size: 14px;
   color: white;
@@ -38,20 +51,12 @@
   display: flex;
   list-style: none;
   align-items: center;
-  margin: 0;
-  padding: 0;
 }
 
 .Header_right ul li {
   display: flex;
   align-items: center;
   padding: 0 12px;
-  font-weight: 300;
+  font-weight: 400;
   color: white;
-}
-
-/* Optional: Add hover effect for better UX */
-.Header_left ul li:hover,
-.Header_right ul li:hover {
-  color: #e50914; /* Netflix red or any visible color */
 }
