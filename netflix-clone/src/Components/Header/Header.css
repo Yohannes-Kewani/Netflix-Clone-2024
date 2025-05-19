@@ -1,25 +1,19 @@
-.header_outer_container {
-  position: fixed; /* Makes header stay at the top */
+.Header_outer_container {
+  position: fixed;
   top: 0;
   left: 0;
-  right: 0;
+  width: 100%;
   height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(
-    360deg,
-    transparent,
-    rgba(0, 0, 0, 0.719),
-    #000
-  );
-  background-color: transparent; /* Transparent by default */
+  background: rgba(0, 0, 0, 0.3); /* transparent black */
   color: #fff;
   z-index: 1000;
-  transition-timing-function: ease-in;
+  backdrop-filter: blur(10px); /* optional for nice blur effect */
 }
 
-/* Optional: Add a dark background on scroll */
+
 .header_outer_container.scrolled {
   background-color: rgba(0, 0, 0, 0.8);
 }
@@ -29,6 +23,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* position: fixed;
+  top: 0; */
+
 }
 
 .Header_left ul {
